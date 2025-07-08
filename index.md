@@ -1,3 +1,15 @@
 ---
-title: Welcome to my blog!
+layout: home
+title: "Добро пожаловать"
 ---
+
+# Приветствуем на нашем удивительном сайте
+
+Здесь вы найдёте вдохновляющие цитаты, записи блога и многое другое. Нажмите на кнопку ниже, чтобы получить случайную цитату дня!
+
+<button onclick="newQuote()">Показать цитату</button>
+<p id="quote"></p>
+
+[О сайте](about)
+
+<script src="/assets/js/random-quote.js"></script>
