@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Penzion Kersko — u lesa, blízko Prahy</title>
+  <meta name="description" content="Útulný penzion v lesním prostředí Kerska nabízí komfortní pokoje, domácí kuchyni a wellness nedaleko Prahy." />
+  <link rel="canonical" href="https://penzion-kersko.cz/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23685244' width='100' height='100'/><path fill='%23fff' d='M50 18L18 70h64L50 18z'/></svg>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Penzion Kersko — u lesa, blízko Prahy" />
+  <meta property="og:description" content="Útulný penzion v lesním prostředí Kerska nabízí komfortní pokoje, domácí kuchyni a wellness nedaleko Prahy." />
+  <meta property="og:url" content="https://penzion-kersko.cz" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Penzion Kersko — u lesa, blízko Prahy" />
+  <meta name="twitter:description" content="Útulný penzion v lesním prostředí Kerska nabízí komfortní pokoje, domácí kuchyni a wellness nedaleko Prahy." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Penzion Kersko",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kersko",
+        "postalCode": "289 12",
+        "addressLocality": "Hradištko",
+        "addressCountry": "CZ"
+      },
+      "telephone": "+420 777 000 000",
+      "url": "https://penzion-kersko.cz"
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              light: '#f1ede6',
+              base: '#6b705c',
+              dark: '#283618'
+            },
+            clay: '#b08968',
+            cream: '#f6f0e8'
+          },
+          fontFamily: {
+            sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 12px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    html {
+      scroll-padding-top: 5rem;
+    }
+    .skip-link {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -200%);
+      background: #283618;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    .skip-link:focus {
+      transform: translate(-50%, 0.5rem);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans bg-cream text-forest-dark dark:bg-[#1a1d1a] dark:text-cream">
+  <a href="#main" class="skip-link" data-i18n="skip">Přeskočit na obsah</a>
+  <div class="bg-forest-base text-white text-sm">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-2">
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="tel:+420777000000" class="flex items-center gap-2 hover:text-clay transition" aria-label="Telefon">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4.5C2 3.12 3.12 2 4.5 2h1.75c.8 0 1.5.5 1.74 1.25l.82 2.73a1.75 1.75 0 0 1-.45 1.7l-1.1 1.1a12.35 12.35 0 0 0 5.6 5.6l1.1-1.1a1.75 1.75 0 0 1 1.7-.45l2.73.82c.75.23 1.25.94 1.25 1.74V19.5A1.5 1.5 0 0 1 17.5 21h-1C8.6 21 3 15.4 3 8.5v-1C3 6.12 2 5.4 2 4.5Z"/></svg>
+          <span data-i18n="topbar.phone">+420 777 000 000</span>
+        </a>
+        <a href="mailto:info@penzion-kersko.cz" class="flex items-center gap-2 hover:text-clay transition" aria-label="Email">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h18M3 5l9 7 9-7M3 19h18V5"/></svg>
+          <span>info@penzion-kersko.cz</span>
+        </a>
+      </div>
+      <a href="#booking" class="bg-clay text-white px-4 py-1.5 rounded-full shadow hover:bg-[#966e52] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition" data-i18n="topbar.book">Rezervovat</a>
+    </div>
+  </div>
+  <header id="siteHeader" class="sticky top-0 z-40 bg-white/95 dark:bg-[#1f241f]/95 backdrop-blur border-b border-forest-light/40 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <a href="#home" class="text-2xl font-semibold tracking-wide text-forest-dark dark:text-cream">Penzion Kersko</a>
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Hlavní navigace">
+          <div id="navLinks" class="flex items-center gap-6 text-sm font-medium"></div>
+          <button id="languageToggle" type="button" class="px-3 py-1 rounded-full border border-forest-base/40 dark:border-cream/40 text-sm hover:bg-forest-base/10 focus:outline-none focus:ring-2 focus:ring-clay" aria-label="Přepnout jazyk">EN</button>
+          <a href="#booking" class="ml-2 px-4 py-2 rounded-full bg-forest-base text-white text-sm font-semibold shadow hover:bg-forest-dark transition focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="nav.book">Rezervace</a>
+        </nav>
+        <div class="lg:hidden flex items-center gap-2">
+          <button id="languageToggleMobile" type="button" class="px-3 py-1 rounded-full border border-forest-base/40 dark:border-cream/40 text-sm hover:bg-forest-base/10 focus:outline-none focus:ring-2 focus:ring-clay" aria-label="Přepnout jazyk">EN</button>
+          <button id="menuToggle" type="button" class="p-2 rounded-md border border-forest-base/30 dark:border-cream/30 focus:outline-none focus:ring-2 focus:ring-clay" aria-label="Otevřít menu">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-forest-light/40 dark:border-white/10 bg-white dark:bg-[#1f241f]">
+      <nav id="mobileNavLinks" class="flex flex-col px-4 py-4 gap-3 text-sm font-medium" aria-label="Mobilní navigace"></nav>
+      <a href="#booking" class="mx-4 mb-4 px-4 py-2 rounded-full bg-forest-base text-white text-center text-sm font-semibold shadow hover:bg-forest-dark transition focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="nav.book">Rezervace</a>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="relative min-h-[70vh] flex items-center" data-section>
+      <div class="absolute inset-0" aria-hidden="true">
+        <div class="h-full w-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+      </div>
+      <div class="relative max-w-6xl mx-auto px-4 py-20 text-white">
+        <div class="max-w-2xl space-y-6 reveal">
+          <h1 class="text-4xl sm:text-5xl font-semibold leading-tight" data-i18n="hero.heading">Penzion Kersko — u lesa, blízko Prahy</h1>
+          <p class="text-lg sm:text-xl text-white/90" data-i18n="hero.subheading">Útulný penzion v srdci kerských lesů s domácí kuchyní, wellness a přátelskou atmosférou jen 35 minut od Prahy.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#booking" class="px-6 py-3 rounded-full bg-clay text-white font-semibold shadow hover:bg-[#966e52] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" data-i18n="hero.primaryCta">Rezervovat</a>
+            <a href="#rooms" class="px-6 py-3 rounded-full bg-white/10 border border-white/30 text-white font-semibold hover:bg-white/20 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" data-i18n="hero.secondaryCta">Zjistit více</a>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center animate-bounce" aria-hidden="true">
+          <span class="block text-xs uppercase tracking-[0.3em] text-white/80" data-i18n="hero.scrollCue">Prozkoumejte nabídku</span>
+          <svg class="w-5 h-5 mx-auto mt-2 text-white/80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white dark:bg-[#222722]" data-section>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="valueProps.title">Proč si vybrat Penzion Kersko</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="valueProps.subtitle">Lesní klid, moderní pohodlí a laskavá péče našeho týmu.</p>
+        </div>
+        <div id="valueProps" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+      </div>
+    </section>
+
+    <section id="rooms" class="py-16 bg-cream dark:bg-[#1a1d1a]" data-section>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-2xl mb-12 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="rooms.title">Pokoje</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="rooms.subtitle">Vyberte si z našich pohodlných pokojů s výhledem do lesa, kvalitními matracemi a přírodní kosmetikou.</p>
+        </div>
+        <div id="roomsContainer" class="grid gap-8 md:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="restaurant" class="py-16 bg-white dark:bg-[#222722]" data-section>
+      <div class="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-2 items-center">
+        <div class="reveal">
+          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80" alt="Restaurace s dřevěným interiérem a servírovaným jídlem" class="rounded-3xl shadow-soft w-full h-full object-cover" loading="lazy" width="900" height="600" />
+        </div>
+        <div class="space-y-6 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="restaurant.title">Restaurace</h2>
+          <p class="text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="restaurant.description">Ochutnejte sezónní česká jídla, čerstvé lesní plody a domácí pečivo. Každé ráno pro vás připravujeme snídaně v ceně pobytu.</p>
+          <a href="mailto:info@penzion-kersko.cz?subject=Menu%20Penzion%20Kersko" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-forest-base text-forest-base dark:text-cream hover:bg-forest-base/10 transition focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="restaurant.cta">Menu na vyžádání</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="wellness" class="py-16 bg-cream dark:bg-[#1a1d1a]" data-section>
+      <div class="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-2 items-center">
+        <div class="space-y-6 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="wellness.title">Wellness</h2>
+          <p class="text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="wellness.description">Dopřejte si relax v sauně s výhledem do zeleně, vyhřátý venkovní whirlpool a odpočinkovou zónu s bylinkovým čajem.</p>
+          <ul id="wellnessHighlights" class="space-y-2 text-forest-dark/80 dark:text-cream/80"></ul>
+        </div>
+        <div class="reveal">
+          <div class="grid grid-cols-3 gap-3">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=80" alt="Wellness sauna" class="rounded-2xl object-cover h-32 w-full" loading="lazy" width="400" height="300" />
+            <img src="https://images.unsplash.com/photo-1556228578-2500c5897e4b?auto=format&fit=crop&w=400&q=80" alt="Horká vířivka" class="rounded-2xl object-cover h-32 w-full" loading="lazy" width="400" height="300" />
+            <img src="https://images.unsplash.com/photo-1470165518886-83eba89f9a80?auto=format&fit=crop&w=400&q=80" alt="Relax zóna s čajem" class="rounded-2xl object-cover h-32 w-full" loading="lazy" width="400" height="300" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-white dark:bg-[#222722]" data-section>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="gallery.title">Galerie</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="gallery.subtitle">Nahlédněte do pokojů, restaurace i okolních lesů.</p>
+        </div>
+        <div id="galleryGrid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="reviews" class="py-16 bg-cream dark:bg-[#1a1d1a]" data-section>
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-10 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="reviews.title">Recenze hostů</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="reviews.subtitle">Sdílíme pár slov od hostů, kteří si zamilovali náš lesní klid.</p>
+        </div>
+        <div class="relative bg-white dark:bg-[#222722] rounded-3xl shadow-soft px-8 py-10 reveal" role="region" aria-live="polite">
+          <div id="reviewContent" class="space-y-4"></div>
+          <div class="mt-6 flex items-center justify-between">
+            <button id="prevReview" type="button" class="flex items-center gap-2 text-sm font-medium text-forest-base hover:text-forest-dark focus:outline-none focus:ring-2 focus:ring-clay px-3 py-2 rounded-full" aria-label="Předchozí recenze">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 18l-6-6 6-6"/></svg>
+              <span data-i18n="reviews.prev">Předchozí</span>
+            </button>
+            <button id="nextReview" type="button" class="flex items-center gap-2 text-sm font-medium text-forest-base hover:text-forest-dark focus:outline-none focus:ring-2 focus:ring-clay px-3 py-2 rounded-full" aria-label="Další recenze">
+              <span data-i18n="reviews.next">Další</span>
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="py-16 bg-white dark:bg-[#222722]" data-section>
+      <div class="max-w-6xl mx-auto px-4 grid gap-10 lg:grid-cols-2 items-start">
+        <div class="space-y-6 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="location.title">Kde nás najdete</h2>
+          <p class="text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="location.subtitle">Lesní osada Kersko, 30 minut od Prahy a kousek od řeky Labe.</p>
+          <p class="text-base font-medium text-forest-dark dark:text-cream" data-i18n="location.addressLabel">Adresa</p>
+          <p class="text-base text-forest-dark/70 dark:text-cream/80" data-i18n="location.address">Kersko, 289 12 Hradištko, Česká republika</p>
+          <ul id="howToList" class="space-y-2 text-forest-dark/80 dark:text-cream/80"></ul>
+          <a href="https://www.openstreetmap.org/search?query=Kersko%20289%2012%20Hradi%C5%A1tko" class="inline-flex items-center gap-2 text-sm font-medium text-forest-base hover:text-forest-dark focus:outline-none focus:ring-2 focus:ring-clay px-3 py-2 rounded-full border border-forest-base/30" target="_blank" rel="noopener" data-i18n="location.mapLink">Otevřít mapu</a>
+        </div>
+        <div class="reveal">
+          <iframe title="Mapa Penzion Kersko" src="https://www.openstreetmap.org/export/embed.html?bbox=14.972%2C50.150%2C14.990%2C50.160&amp;layer=mapnik&amp;marker=50.155%2C14.981" class="w-full h-80 rounded-3xl shadow-soft border-0" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="py-16 bg-cream dark:bg-[#1a1d1a]" data-section>
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-10 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="booking.title">Rezervace</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="booking.subtitle">Vyplňte prosím základní údaje a my se vám ozveme s potvrzením nejpozději do 24 hodin.</p>
+        </div>
+        <form id="bookingForm" class="bg-white dark:bg-[#222722] rounded-3xl shadow-soft p-6 md:p-10 space-y-6 reveal" novalidate>
+          <div class="grid gap-6 md:grid-cols-2">
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream">
+              <span data-i18n="booking.form.arrivalLabel">Příjezd</span>
+              <input type="date" name="arrival" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" required />
+            </label>
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream">
+              <span data-i18n="booking.form.departureLabel">Odjezd</span>
+              <input type="date" name="departure" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" required />
+            </label>
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream">
+              <span data-i18n="booking.form.adultsLabel">Dospělí</span>
+              <input type="number" name="adults" min="1" max="6" value="2" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" required />
+            </label>
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream">
+              <span data-i18n="booking.form.childrenLabel">Děti</span>
+              <input type="number" name="children" min="0" max="6" value="0" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" />
+            </label>
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream md:col-span-2">
+              <span data-i18n="booking.form.roomTypeLabel">Typ pokoje</span>
+              <select name="room" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" required></select>
+            </label>
+            <label class="flex flex-col text-sm font-medium text-forest-dark dark:text-cream md:col-span-2">
+              <span data-i18n="booking.form.notesLabel">Poznámka</span>
+              <textarea name="notes" rows="3" class="mt-2 rounded-lg border border-forest-base/20 bg-white/80 dark:bg-[#1a1d1a] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-clay" placeholder="" data-i18n-placeholder="booking.form.notesPlaceholder"></textarea>
+            </label>
+          </div>
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm text-forest-dark/70 dark:text-cream/80" data-i18n="booking.notice">Odesláním formuláře nezávazně poptáváte dostupnost. Potvrzení vám zašleme e-mailem.</p>
+            <button type="submit" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-forest-base text-white font-semibold shadow hover:bg-forest-dark focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="booking.form.submit">Odeslat rezervaci</button>
+          </div>
+        </form>
+        <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 bg-forest-dark text-white px-4 py-2 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity"></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="py-16 bg-white dark:bg-[#222722]" data-section>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mb-10 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="pricing.title">Ceník a informace</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="pricing.subtitle">Transparentní ceny zahrnují snídani, parkování a Wi-Fi. Ceny se liší podle sezóny a obsazenosti.</p>
+        </div>
+        <div class="overflow-hidden rounded-3xl shadow-soft bg-cream dark:bg-[#1a1d1a] reveal">
+          <table class="w-full text-left text-sm text-forest-dark dark:text-cream">
+            <tbody id="pricingTable" class="divide-y divide-forest-base/20 dark:divide-white/10"></tbody>
+          </table>
+        </div>
+        <p class="mt-6 text-sm text-forest-dark/70 dark:text-cream/80 reveal" data-i18n="pricing.note">Poznámka: Sezónní balíčky a dlouhodobé pobyty na vyžádání. TODO: doplnit konkrétní termíny a akce.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="py-16 bg-cream dark:bg-[#1a1d1a]" data-section>
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-12 reveal">
+          <h2 class="text-3xl font-semibold text-forest-dark dark:text-cream" data-i18n="faq.title">Často se ptáte</h2>
+          <p class="mt-3 text-lg text-forest-dark/70 dark:text-cream/80" data-i18n="faq.subtitle">Praktické informace pro bezstarostný pobyt.</p>
+        </div>
+        <div id="faqContainer" class="space-y-4"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-[#121512] text-cream" data-section>
+    <div class="max-w-6xl mx-auto px-4 py-16 grid gap-10 md:grid-cols-4">
+      <div class="space-y-3">
+        <h3 class="text-xl font-semibold">Penzion Kersko</h3>
+        <p class="text-sm" data-i18n="footer.description">Lesní penzion s osobním přístupem. TODO: doplnit oficiální registrační údaje.</p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold uppercase tracking-wide text-white/70" data-i18n="footer.contactTitle">Kontakt</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><span data-i18n="footer.address">Kersko, 289 12 Hradištko</span></li>
+          <li><a href="tel:+420777000000" class="hover:text-clay transition">+420 777 000 000</a></li>
+          <li><a href="mailto:info@penzion-kersko.cz" class="hover:text-clay transition">info@penzion-kersko.cz</a></li>
+          <li><span data-i18n="footer.hours">Recepce: 8:00 – 21:00</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold uppercase tracking-wide text-white/70" data-i18n="footer.socialTitle">Sledujte nás</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#" class="hover:text-clay transition" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" class="hover:text-clay transition" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" class="hover:text-clay transition" aria-label="YouTube">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h4 class="text-sm font-semibold uppercase tracking-wide text-white/70" data-i18n="footer.mapTitle">Mapa a příjezd</h4>
+        <p class="text-sm" data-i18n="footer.mapNote">GPS TODO: doplnit přesné souřadnice. Parkoviště přímo u penzionu.</p>
+        <a href="#location" class="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-white/20 text-sm hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="footer.mapCta">Jak se k nám dostat</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-xs text-white/60" data-i18n="footer.rights">© 2024 Penzion Kersko. Všechna práva vyhrazena.</div>
+  </footer>
+
+  <a href="#booking" class="lg:hidden fixed bottom-4 right-4 px-5 py-3 rounded-full bg-clay text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-white" data-i18n="mobileCta">Rezervovat</a>
+
+  <div id="cookieBanner" class="fixed inset-x-4 bottom-4 bg-white dark:bg-[#222722] text-forest-dark dark:text-cream rounded-2xl shadow-soft px-5 py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between max-w-3xl mx-auto border border-forest-base/20 dark:border-white/10">
+    <p class="text-sm" data-i18n="cookie.message">Používáme základní cookies pro funkčnost webu. Pokračováním souhlasíte.</p>
+    <button id="cookieAccept" class="px-4 py-2 rounded-full bg-forest-base text-white text-sm font-semibold hover:bg-forest-dark transition focus:outline-none focus:ring-2 focus:ring-clay" data-i18n="cookie.accept">Souhlasím</button>
+  </div>
+
+  <script>
+    const galleryImages = [
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600585154340-0ef3c08ac11b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1485115905815-74a5c9fda2e8?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80'
+    ];
+
+    const icons = [
+      `<svg class="w-10 h-10 text-forest-base" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l9 4-9 4-9-4 9-4Zm0 8l9 4-9 4-9-4 9-4Zm0 8l9 4-9 4-9-4 9-4Z"/></svg>`,
+      `<svg class="w-10 h-10 text-forest-base" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 9.75c0 3.728 3.271 6.75 7.5 6.75s7.5-3.022 7.5-6.75"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 9.75c0 3-3.75 9-9 9s-9-6-9-9M12 3v6.75"/></svg>`,
+      `<svg class="w-10 h-10 text-forest-base" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c2.761 0 5 2.41 5 5.385 0 1.35-.486 2.722-1.386 3.77L12 18l-3.614-5.845C7.486 11.107 7 9.735 7 8.385 7 5.41 9.239 3 12 3Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.5 20h7"/></svg>`,
+      `<svg class="w-10 h-10 text-forest-base" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><rect width="16" height="10" x="4" y="7" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 11h.01M16 11h.01"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17h6"/></svg>`
+    ];
+
+    const translations = {
+      cs: {
+        meta: {
+          title: 'Penzion Kersko — u lesa, blízko Prahy',
+          description: 'Útulný penzion v lesním prostředí Kerska nabízí komfortní pokoje, domácí kuchyni a wellness nedaleko Prahy.'
+        },
+        skip: 'Přeskočit na obsah',
+        topbar: {
+          phone: '+420 777 000 000',
+          book: 'Rezervovat'
+        },
+        nav: [
+          { id: 'home', label: 'Domů' },
+          { id: 'rooms', label: 'Pokoje' },
+          { id: 'restaurant', label: 'Restaurace' },
+          { id: 'wellness', label: 'Wellness' },
+          { id: 'gallery', label: 'Galerie' },
+          { id: 'reviews', label: 'Recenze' },
+          { id: 'contact', label: 'Kontakt' },
+          { id: 'booking', label: 'Rezervace' }
+        ],
+        hero: {
+          heading: 'Penzion Kersko — u lesa, blízko Prahy',
+          subheading: 'Útulný penzion v srdci kerských lesů s domácí kuchyní, wellness a přátelskou atmosférou jen 35 minut od Prahy.',
+          primaryCta: 'Rezervovat',
+          secondaryCta: 'Zjistit více',
+          scrollCue: 'Prozkoumejte nabídku'
+        },
+        valueProps: {
+          title: 'Proč si vybrat Penzion Kersko',
+          subtitle: 'Lesní klid, moderní pohodlí a laskavá péče našeho týmu.',
+          items: [
+            { title: 'Tiché lesní prostředí', description: 'Ráno vás probudí zpěv ptáků, ne ruch města. Ideální pro odpočinek i workation.' },
+            { title: 'Místní kuchyně', description: 'Vaříme z regionálních surovin, připravujeme vegetariánské i bezlepkové varianty.' },
+            { title: 'Sauna a wellness', description: 'Privátní sauna, venkovní vířivka a masáže na objednávku.' },
+            { title: 'Parkování & Wi-Fi zdarma', description: 'Bezplatné parkování přímo u penzionu a rychlé připojení v celém areálu.' }
+          ]
+        },
+        rooms: {
+          title: 'Pokoje',
+          subtitle: 'Vyberte si z našich pohodlných pokojů s výhledem do lesa, kvalitními matracemi a přírodní kosmetikou.',
+          priceLabel: 'od 1 890 Kč / noc',
+          button: 'Detail / Rezervace',
+          cards: [
+            {
+              name: 'Standard',
+              description: 'Světlý pokoj s manželskou postelí, pracovním stolem a koupelnou se sprchou.',
+              amenities: ['Manželská postel', 'Kávový koutek', 'Smart TV', 'Lesní výhled'],
+              image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+              name: 'Deluxe',
+              description: 'Prostorné studio s posezením, balkonem a volně stojící vanou.',
+              amenities: ['Balkon', 'Vana', 'Mini bar', 'Privátní sauna slot'],
+              image: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+              name: 'Rodinný',
+              description: 'Apartmán se dvěma ložnicemi a dětským koutkem, ideální pro rodiny.',
+              amenities: ['Dvě ložnice', 'Dětský koutek', 'Kuchyňský kout', 'Dvě koupelny'],
+              image: 'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80'
+            }
+          ]
+        },
+        restaurant: {
+          title: 'Restaurace',
+          description: 'Ochutnejte sezónní česká jídla, čerstvé lesní plody a domácí pečivo. Každé ráno pro vás připravujeme snídaně v ceně pobytu.',
+          cta: 'Menu na vyžádání'
+        },
+        wellness: {
+          title: 'Wellness',
+          description: 'Dopřejte si relax v sauně s výhledem do zeleně, vyhřátý venkovní whirlpool a odpočinkovou zónu s bylinkovým čajem.',
+          highlights: ['Privátní sauna na 60 minut', 'Venkovní vířivka s hvězdnou oblohou', 'Bylinkový čaj a odpočinková lounge']
+        },
+        gallery: {
+          title: 'Galerie',
+          subtitle: 'Nahlédněte do pokojů, restaurace i okolních lesů.',
+          alt: ['Lesní stezka v Kersku', 'Pohodlný hotelový pokoj', 'Moderní koupelna', 'Stylová společenská místnost', 'Detail dřevěného interiéru', 'Servírovaná snídaně', 'Lesní terasa s posezením', 'Sezónní česká kuchyně', 'Rodinný pokoj', 'Večerní lesní atmosféra', 'Wellness masáže', 'Lesní panorama']
+        },
+        reviews: {
+          title: 'Recenze hostů',
+          subtitle: 'Sdílíme pár slov od hostů, kteří si zamilovali náš lesní klid.',
+          prev: 'Předchozí',
+          next: 'Další',
+          items: [
+            { text: 'Skvělé místo na víkendový únik. Milý personál, bohaté snídaně a nádherné procházky v okolí.', name: 'Lenka, Praha', rating: 5 },
+            { text: 'Wellness balíček nás nadchl, sauna s výhledem do lesa je nezapomenutelná. Určitě se vrátíme!', name: 'Marek & Petra, Brno', rating: 5 },
+            { text: 'Rodinný pokoj splnil vše, co jsme potřebovali s dětmi. Oceňuji i velkou zahradu.', name: 'Hana, Pardubice', rating: 4 }
+          ]
+        },
+        location: {
+          title: 'Kde nás najdete',
+          subtitle: 'Lesní osada Kersko, 30 minut od Prahy a kousek od řeky Labe.',
+          addressLabel: 'Adresa',
+          address: 'Kersko, 289 12 Hradištko, Česká republika',
+          mapLink: 'Otevřít mapu',
+          howTo: ['Autem: D11, exit 18. Parkování zdarma na místě.', 'Vlakem: stanice Sadská, dále taxi (10 min).', 'Autobusem: linka Praha Černý Most – Hradištko.', 'Na kole: cyklostezka Labská č. 2 přes Kersko.']
+        },
+        booking: {
+          title: 'Rezervace',
+          subtitle: 'Vyplňte prosím základní údaje a my se vám ozveme s potvrzením nejpozději do 24 hodin.',
+          notice: 'Odesláním formuláře nezávazně poptáváte dostupnost. Potvrzení vám zašleme e-mailem.',
+          success: 'Děkujeme! Ozveme se co nejdříve.',
+          error: 'Zkontrolujte prosím povinné údaje.',
+          mailSubject: 'Rezervace%20-%20Penzion%20Kersko',
+          form: {
+            arrivalLabel: 'Příjezd',
+            departureLabel: 'Odjezd',
+            adultsLabel: 'Dospělí',
+            childrenLabel: 'Děti',
+            roomTypeLabel: 'Typ pokoje',
+            notesLabel: 'Poznámka',
+            notesPlaceholder: 'Preferovaná strava, čas příjezdu, speciální přání…',
+            submit: 'Odeslat rezervaci'
+          },
+          roomOptions: ['Standard', 'Deluxe', 'Rodinný'],
+          roomOptionsValues: ['standard', 'deluxe', 'family']
+        },
+        pricing: {
+          title: 'Ceník a informace',
+          subtitle: 'Transparentní ceny zahrnují snídani, parkování a Wi-Fi. Ceny se liší podle sezóny a obsazenosti.',
+          rows: [
+            { label: 'Standard pokoj', value: 'od 1 890 Kč / noc (včetně snídaně)' },
+            { label: 'Deluxe pokoj', value: 'od 2 490 Kč / noc (včetně snídaně)' },
+            { label: 'Rodinný apartmán', value: 'od 3 290 Kč / noc (včetně snídaně)' },
+            { label: 'Dětská přistýlka', value: '350 Kč / noc' },
+            { label: 'Wellness balíček', value: '890 Kč / pár (60 min sauna + whirlpool)' },
+            { label: 'Domácí mazlíček', value: '250 Kč / noc (malá plemena)' }
+          ],
+          note: 'Poznámka: Sezónní balíčky a dlouhodobé pobyty na vyžádání. TODO: doplnit konkrétní termíny a akce.'
+        },
+        faq: {
+          title: 'Často se ptáte',
+          subtitle: 'Praktické informace pro bezstarostný pobyt.',
+          items: [
+            { q: 'Od kdy je možný check-in a do kdy check-out?', a: 'Check-in od 15:00, check-out do 11:00. Individuální časy po domluvě.' },
+            { q: 'Jsou povoleni domácí mazlíčci?', a: 'Ano, menší psi za příplatek. Prosíme o předchozí informaci.' },
+            { q: 'Je k dispozici parkování?', a: 'Parkování je zdarma na vlastním parkovišti přímo u penzionu.' },
+            { q: 'Jaká je storno politika?', a: 'Bezplatné zrušení 7 dní před příjezdem. Poté účtujeme 50 % z ceny pobytu.' },
+            { q: 'Je snídaně v ceně?', a: 'Ano, bohatá snídaně z lokálních surovin je zahrnuta v ceně pobytu.' },
+            { q: 'Kdy je otevřené wellness?', a: 'Wellness je otevřeno denně od 9:00 do 21:00. Rezervace slotu je nutná předem.' }
+          ]
+        },
+        footer: {
+          description: 'Lesní penzion s osobním přístupem. TODO: doplnit oficiální registrační údaje.',
+          contactTitle: 'Kontakt',
+          address: 'Kersko, 289 12 Hradištko',
+          hours: 'Recepce: 8:00 – 21:00',
+          socialTitle: 'Sledujte nás',
+          mapTitle: 'Mapa a příjezd',
+          mapNote: 'GPS TODO: doplnit přesné souřadnice. Parkoviště přímo u penzionu.',
+          mapCta: 'Jak se k nám dostat',
+          rights: '© 2024 Penzion Kersko. Všechna práva vyhrazena.'
+        },
+        cookie: {
+          message: 'Používáme základní cookies pro funkčnost webu. Pokračováním souhlasíte.',
+          accept: 'Souhlasím'
+        },
+        mobileCta: 'Rezervovat',
+        reviewsNavLabels: { prevAria: 'Předchozí recenze', nextAria: 'Další recenze' },
+        locationMapLink: 'Otevřít mapu',
+        faqToggleLabel: 'Přepnout odpověď',
+        languageLabel: 'Přepnout na angličtinu'
+      },
+      en: {
+        meta: {
+          title: 'Penzion Kersko — by the forest, near Prague',
+          description: 'Cozy guesthouse in the Kersko woods with comfortable rooms, local cuisine and wellness close to Prague.'
+        },
+        skip: 'Skip to content',
+        topbar: {
+          phone: '+420 777 000 000',
+          book: 'Book Now'
+        },
+        nav: [
+          { id: 'home', label: 'Home' },
+          { id: 'rooms', label: 'Rooms' },
+          { id: 'restaurant', label: 'Restaurant' },
+          { id: 'wellness', label: 'Wellness' },
+          { id: 'gallery', label: 'Gallery' },
+          { id: 'reviews', label: 'Reviews' },
+          { id: 'contact', label: 'Contact' },
+          { id: 'booking', label: 'Book' }
+        ],
+        hero: {
+          heading: 'Penzion Kersko — by the forest, near Prague',
+          subheading: 'A welcoming hideaway amid the Kersko woods with homemade cuisine, wellness and warm hospitality just 35 minutes from Prague.',
+          primaryCta: 'Book Now',
+          secondaryCta: 'Discover more',
+          scrollCue: 'Explore the stay'
+        },
+        valueProps: {
+          title: 'Why stay at Penzion Kersko',
+          subtitle: 'Forest serenity, modern comfort and heartfelt service from our team.',
+          items: [
+            { title: 'Peaceful forest setting', description: 'Wake up to birdsong instead of city noise. Perfect for rest or a workation.' },
+            { title: 'Local cuisine', description: 'Seasonal Czech recipes with regional ingredients, including vegetarian and gluten-free options.' },
+            { title: 'Sauna & wellness', description: 'Private sauna, outdoor hot tub and massages available on request.' },
+            { title: 'Free parking & Wi-Fi', description: 'Complimentary parking onsite and fast Wi-Fi across the property.' }
+          ]
+        },
+        rooms: {
+          title: 'Rooms',
+          subtitle: 'Choose from bright forest-view rooms with quality mattresses and natural amenities.',
+          priceLabel: 'from 1 890 CZK / night',
+          button: 'Details / Book',
+          cards: [
+            {
+              name: 'Standard',
+              description: 'Bright double room with writing desk and bathroom with rain shower.',
+              amenities: ['Queen bed', 'Coffee station', 'Smart TV', 'Forest view'],
+              image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+              name: 'Deluxe',
+              description: 'Spacious studio featuring lounge area, balcony and freestanding bathtub.',
+              amenities: ['Balcony', 'Bathtub', 'Mini bar', 'Private sauna slot'],
+              image: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80'
+            },
+            {
+              name: 'Family',
+              description: 'Two-bedroom suite with kids corner, perfect for families or friends.',
+              amenities: ['Two bedrooms', 'Kids corner', 'Kitchenette', 'Two bathrooms'],
+              image: 'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80'
+            }
+          ]
+        },
+        restaurant: {
+          title: 'Restaurant',
+          description: 'Taste seasonal Czech dishes, foraged forest treats and homemade pastries. Breakfast is included with every stay.',
+          cta: 'Menu on request'
+        },
+        wellness: {
+          title: 'Wellness',
+          description: 'Unwind in a sauna overlooking the greenery, enjoy the heated outdoor hot tub and relax with herbal tea in the lounge.',
+          highlights: ['60-minute private sauna', 'Outdoor hot tub under the stars', 'Herbal tea and chill-out lounge']
+        },
+        gallery: {
+          title: 'Gallery',
+          subtitle: 'Peek into our rooms, dining spaces and the surrounding woods.',
+          alt: ['Forest trail in Kersko', 'Cozy hotel room', 'Modern bathroom', 'Stylish lounge area', 'Wooden interior detail', 'Breakfast spread', 'Forest terrace seating', 'Seasonal Czech cuisine', 'Family suite', 'Evening forest atmosphere', 'Wellness massage', 'Forest panorama']
+        },
+        reviews: {
+          title: 'Guest reviews',
+          subtitle: 'A few words from guests who loved our woodland hideaway.',
+          prev: 'Previous',
+          next: 'Next',
+          items: [
+            { text: 'A wonderful weekend escape. Friendly staff, generous breakfasts and beautiful walks nearby.', name: 'Lenka, Prague', rating: 5 },
+            { text: 'The wellness package was fantastic. The sauna with a forest view is unforgettable. We will return!', name: 'Mark & Petra, Brno', rating: 5 },
+            { text: 'Family suite was perfect for our kids. We appreciated the large garden and play corner.', name: 'Hana, Pardubice', rating: 4 }
+          ]
+        },
+        location: {
+          title: 'Where to find us',
+          subtitle: 'Forest hamlet Kersko, 30 minutes from Prague and close to the Elbe river.',
+          addressLabel: 'Address',
+          address: 'Kersko, 289 12 Hradištko, Czechia',
+          mapLink: 'Open map',
+          howTo: ['By car: D11, exit 18. Free parking onsite.', 'By train: Sadská station, then taxi (10 min).', 'By bus: line Prague Černý Most – Hradištko.', 'By bike: Elbe cycle path no. 2 passes Kersko.']
+        },
+        booking: {
+          title: 'Booking request',
+          subtitle: 'Share a few details and we will confirm availability within 24 hours.',
+          notice: 'Submitting the form is a non-binding inquiry. We will reply by email.',
+          success: 'Thank you! We will be in touch shortly.',
+          error: 'Please double-check the required fields.',
+          mailSubject: 'Reservation%20-%20Penzion%20Kersko',
+          form: {
+            arrivalLabel: 'Arrival',
+            departureLabel: 'Departure',
+            adultsLabel: 'Adults',
+            childrenLabel: 'Children',
+            roomTypeLabel: 'Room type',
+            notesLabel: 'Notes',
+            notesPlaceholder: 'Dietary needs, arrival time, special requests…',
+            submit: 'Send request'
+          },
+          roomOptions: ['Standard', 'Deluxe', 'Family'],
+          roomOptionsValues: ['standard', 'deluxe', 'family']
+        },
+        pricing: {
+          title: 'Rates & details',
+          subtitle: 'Transparent rates include breakfast, parking and Wi-Fi. Rates vary by season and occupancy.',
+          rows: [
+            { label: 'Standard room', value: 'from 1 890 CZK / night (breakfast included)' },
+            { label: 'Deluxe room', value: 'from 2 490 CZK / night (breakfast included)' },
+            { label: 'Family suite', value: 'from 3 290 CZK / night (breakfast included)' },
+            { label: 'Extra bed', value: '350 CZK / night' },
+            { label: 'Wellness package', value: '890 CZK / couple (60 min sauna + hot tub)' },
+            { label: 'Pet stay', value: '250 CZK / night (small breeds)' }
+          ],
+          note: 'Note: Seasonal packages and long-stay offers available on request. TODO: add exact dates and specials.'
+        },
+        faq: {
+          title: 'FAQ',
+          subtitle: 'Helpful details for a carefree stay.',
+          items: [
+            { q: 'What are check-in and check-out times?', a: 'Check-in from 3:00 PM, check-out by 11:00 AM. Different times on request.' },
+            { q: 'Are pets allowed?', a: 'Yes, small dogs for an extra fee. Please let us know in advance.' },
+            { q: 'Is parking available?', a: 'Complimentary parking is available right at the guesthouse.' },
+            { q: 'What is the cancellation policy?', a: 'Free cancellation up to 7 days before arrival. Afterwards 50% fee applies.' },
+            { q: 'Is breakfast included?', a: 'Yes, a hearty breakfast with local produce is included in the nightly rate.' },
+            { q: 'When is the wellness open?', a: 'Wellness operates daily from 9 AM to 9 PM. Please book your slot ahead.' }
+          ]
+        },
+        footer: {
+          description: 'Forest guesthouse with a personal touch. TODO: add official registry details.',
+          contactTitle: 'Contact',
+          address: 'Kersko, 289 12 Hradištko',
+          hours: 'Reception: 8 AM – 9 PM',
+          socialTitle: 'Follow us',
+          mapTitle: 'Map & arrival',
+          mapNote: 'GPS TODO: add precise coordinates. Parking right at the guesthouse.',
+          mapCta: 'How to get here',
+          rights: '© 2024 Penzion Kersko. All rights reserved.'
+        },
+        cookie: {
+          message: 'We use essential cookies to keep the site running. By continuing you agree.',
+          accept: 'Accept'
+        },
+        mobileCta: 'Book Now',
+        reviewsNavLabels: { prevAria: 'Previous review', nextAria: 'Next review' },
+        locationMapLink: 'Open map',
+        faqToggleLabel: 'Toggle answer',
+        languageLabel: 'Switch to Czech'
+      }
+    };
+
+    const state = {
+      currentLang: 'cs',
+      reviewIndex: 0,
+      consentGiven: false
+    };
+
+    let revealObserver;
+
+    const textElements = document.querySelectorAll('[data-i18n]');
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+
+    function renderNav(lang) {
+      const navContainer = document.getElementById('navLinks');
+      const mobileNavContainer = document.getElementById('mobileNavLinks');
+      navContainer.innerHTML = '';
+      mobileNavContainer.innerHTML = '';
+      translations[lang].nav.forEach((item) => {
+        const link = document.createElement('a');
+        link.href = `#${item.id}`;
+        link.textContent = item.label;
+        link.className = 'text-forest-dark/80 dark:text-cream/80 hover:text-forest-base dark:hover:text-cream transition';
+        link.dataset.sectionTarget = item.id;
+        link.addEventListener('click', () => closeMobileMenu());
+        navContainer.appendChild(link);
+        const mobileLink = link.cloneNode(true);
+        mobileNavContainer.appendChild(mobileLink);
+      });
+    }
+
+    function renderValueProps(lang) {
+      const container = document.getElementById('valueProps');
+      container.innerHTML = '';
+      translations[lang].valueProps.items.forEach((item, idx) => {
+        const card = document.createElement('article');
+        card.className = 'reveal bg-cream dark:bg-[#1a1d1a] rounded-3xl p-6 shadow-soft h-full flex flex-col gap-4';
+        card.innerHTML = `${icons[idx]}<div><h3 class="text-lg font-semibold text-forest-dark dark:text-cream">${item.title}</h3><p class="mt-2 text-sm text-forest-dark/70 dark:text-cream/80">${item.description}</p></div>`;
+        container.appendChild(card);
+      });
+    }
+
+    function renderRooms(lang) {
+      const container = document.getElementById('roomsContainer');
+      container.innerHTML = '';
+      translations[lang].rooms.cards.forEach((cardData) => {
+        const card = document.createElement('article');
+        card.className = 'reveal bg-white dark:bg-[#222722] rounded-3xl shadow-soft overflow-hidden flex flex-col';
+        card.innerHTML = `
+          <img src="${cardData.image}" alt="${cardData.name}" class="h-48 w-full object-cover" loading="lazy" width="600" height="400" />
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div>
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-xl font-semibold text-forest-dark dark:text-cream">${cardData.name}</h3>
+                <span class="text-sm font-medium text-forest-base dark:text-cream/80">${translations[lang].rooms.priceLabel}</span>
+              </div>
+              <p class="mt-2 text-sm text-forest-dark/70 dark:text-cream/80">${cardData.description}</p>
+            </div>
+            <ul class="text-sm text-forest-dark/80 dark:text-cream/80 space-y-1">
+              ${cardData.amenities.map((a) => `<li class="flex items-center gap-2"><svg class="w-4 h-4 text-clay" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5 13l4 4L19 7\"/></svg>${a}</li>`).join('')}
+            </ul>
+            <button class="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-forest-base text-white text-sm font-semibold shadow hover:bg-forest-dark transition focus:outline-none focus:ring-2 focus:ring-clay" data-scroll="#booking">${translations[lang].rooms.button}</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function renderWellness(lang) {
+      const list = document.getElementById('wellnessHighlights');
+      list.innerHTML = '';
+      translations[lang].wellness.highlights.forEach((item) => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-3';
+        li.innerHTML = `<svg class="w-5 h-5 text-clay mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 5v14m7-7H5"/></svg><span>${item}</span>`;
+        list.appendChild(li);
+      });
+    }
+
+    function renderGallery(lang) {
+      const grid = document.getElementById('galleryGrid');
+      grid.innerHTML = '';
+      galleryImages.forEach((src, idx) => {
+        const figure = document.createElement('figure');
+        figure.className = 'reveal overflow-hidden rounded-3xl shadow-soft';
+        const altText = translations[lang].gallery.alt[idx] || '';
+        figure.innerHTML = `<img src="${src}" alt="${altText}" class="w-full h-56 object-cover" loading="lazy" width="600" height="400" />`;
+        grid.appendChild(figure);
+      });
+    }
+
+    function renderReviews(lang) {
+      const reviewContent = document.getElementById('reviewContent');
+      const items = translations[lang].reviews.items;
+      if (!items.length) return;
+      state.reviewIndex = (state.reviewIndex + items.length) % items.length;
+      const review = items[state.reviewIndex];
+      reviewContent.innerHTML = `
+        <div class="flex gap-1 text-clay" aria-hidden="true">
+          ${Array.from({ length: 5 }).map((_, i) => `<svg class=\"w-5 h-5\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"${i < review.rating ? '#b08968' : 'none'}\" viewBox=\"0 0 24 24\" stroke=\"#b08968\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M11.48 3.5l1.55 3.14 3.47.5-2.51 2.45.59 3.44-3.1-1.63-3.1 1.63.59-3.44-2.51-2.45 3.47-.5 1.55-3.14z\"/></svg>`).join('')}
+        </div>
+        <span class="sr-only">${review.rating} / 5</span>
+        <p class="text-lg text-forest-dark/90 dark:text-cream">“${review.text}”</p>
+        <p class="text-sm text-forest-dark/70 dark:text-cream/80">${review.name}</p>
+      `;
+      document.getElementById('prevReview').setAttribute('aria-label', translations[lang].reviewsNavLabels.prevAria);
+      document.getElementById('nextReview').setAttribute('aria-label', translations[lang].reviewsNavLabels.nextAria);
+    }
+
+    function renderLocation(lang) {
+      const list = document.getElementById('howToList');
+      list.innerHTML = '';
+      translations[lang].location.howTo.forEach((item) => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-3';
+        li.innerHTML = `<svg class="w-5 h-5 text-clay mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3Zm0 0v8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21H5"/></svg><span>${item}</span>`;
+        list.appendChild(li);
+      });
+    }
+
+    function renderPricing(lang) {
+      const table = document.getElementById('pricingTable');
+      table.innerHTML = '';
+      translations[lang].pricing.rows.forEach((row) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<th scope="row" class="px-6 py-4 text-sm font-semibold">${row.label}</th><td class="px-6 py-4 text-sm">${row.value}</td>`;
+        table.appendChild(tr);
+      });
+    }
+
+    function renderFaq(lang) {
+      const container = document.getElementById('faqContainer');
+      container.innerHTML = '';
+      translations[lang].faq.items.forEach((item, index) => {
+        const details = document.createElement('details');
+        details.className = 'reveal bg-white dark:bg-[#222722] rounded-3xl shadow-soft px-6 py-4';
+        if (index === 0) details.open = true;
+        details.innerHTML = `
+          <summary class="flex items-center justify-between gap-4 cursor-pointer text-left text-lg font-semibold text-forest-dark dark:text-cream">
+            <span>${item.q}</span>
+            <svg class="w-5 h-5 text-clay transition-transform duration-300 details-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-forest-dark/70 dark:text-cream/80">${item.a}</p>
+        `;
+        details.querySelector('summary').setAttribute('aria-label', translations[lang].faqToggleLabel);
+        if (details.open) {
+          details.querySelector('.details-arrow').classList.add('rotate-180');
+        }
+        details.addEventListener('toggle', () => {
+          const arrow = details.querySelector('.details-arrow');
+          if (details.open) {
+            arrow.classList.add('rotate-180');
+          } else {
+            arrow.classList.remove('rotate-180');
+          }
+        });
+        container.appendChild(details);
+      });
+    }
+
+    function renderBookingOptions(lang) {
+      const select = document.querySelector('#bookingForm select[name="room"]');
+      if (!select) return;
+      const previousValue = select.value;
+      select.innerHTML = '';
+      translations[lang].booking.roomOptions.forEach((option, idx) => {
+        const opt = document.createElement('option');
+        opt.value = translations[lang].booking.roomOptionsValues[idx];
+        opt.textContent = option;
+        select.appendChild(opt);
+      });
+      if (previousValue) {
+        select.value = previousValue;
+      }
+    }
+
+    function updateStaticText(lang) {
+      textElements.forEach((el) => {
+        const key = el.dataset.i18n;
+        if (!key) return;
+        const value = key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), translations[lang]);
+        if (typeof value === 'string') {
+          el.textContent = value;
+        }
+      });
+      placeholderElements.forEach((el) => {
+        const key = el.dataset.i18nPlaceholder;
+        if (!key) return;
+        const value = key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), translations[lang]);
+        if (typeof value === 'string') {
+          el.placeholder = value;
+        }
+      });
+    }
+
+    function updateMeta(lang) {
+      document.title = translations[lang].meta.title;
+      document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].meta.description);
+      document.querySelector('meta[property="og:title"]').setAttribute('content', translations[lang].meta.title);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', translations[lang].meta.description);
+      document.querySelector('meta[name="twitter:title"]').setAttribute('content', translations[lang].meta.title);
+      document.querySelector('meta[name="twitter:description"]').setAttribute('content', translations[lang].meta.description);
+    }
+
+    function setLanguage(lang) {
+      state.currentLang = lang;
+      document.documentElement.lang = lang === 'cs' ? 'cs' : 'en';
+      updateMeta(lang);
+      updateStaticText(lang);
+      renderNav(lang);
+      renderValueProps(lang);
+      renderRooms(lang);
+      renderWellness(lang);
+      renderGallery(lang);
+      renderReviews(lang);
+      renderLocation(lang);
+      renderPricing(lang);
+      renderFaq(lang);
+      renderBookingOptions(lang);
+      const toggleBtn = document.getElementById('languageToggle');
+      const toggleBtnMobile = document.getElementById('languageToggleMobile');
+      if (toggleBtn) {
+        toggleBtn.textContent = lang === 'cs' ? 'EN' : 'CZ';
+        toggleBtn.setAttribute('aria-label', translations[lang].languageLabel);
+      }
+      if (toggleBtnMobile) {
+        toggleBtnMobile.textContent = lang === 'cs' ? 'EN' : 'CZ';
+        toggleBtnMobile.setAttribute('aria-label', translations[lang].languageLabel);
+      }
+      localStorage.setItem('pk-lang', lang);
+      initReveal();
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.add('opacity-0');
+        toast.classList.remove('opacity-100');
+        setTimeout(() => {
+          toast.classList.add('pointer-events-none');
+        }, 300);
+      }, 4000);
+    }
+
+    function initForm() {
+      const form = document.getElementById('bookingForm');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const requiredFields = ['arrival', 'departure', 'adults', 'room'];
+        let valid = true;
+        requiredFields.forEach((field) => {
+          if (!formData.get(field)) {
+            valid = false;
+          }
+        });
+        if (!valid) {
+          showToast(translations[state.currentLang].booking.error);
+          return;
+        }
+        try {
+          await fetch('/reserve', {
+            method: 'POST',
+            body: formData,
+          });
+        } catch (e) {
+          // ignore network errors in demo
+        }
+        const query = new URLSearchParams({
+          subject: translations[state.currentLang].booking.mailSubject,
+          body: Array.from(formData.entries()).map(([key, value]) => `${key}: ${value}`).join('\n')
+        });
+        const mailtoLink = `mailto:info@penzion-kersko.cz?${query.toString()}`;
+        window.open(mailtoLink, '_blank');
+        showToast(translations[state.currentLang].booking.success);
+        form.reset();
+      });
+    }
+
+    function initScrollButtons() {
+      document.body.addEventListener('click', (event) => {
+        const target = event.target.closest('[data-scroll]');
+        if (target) {
+          const selector = target.getAttribute('data-scroll');
+          const el = document.querySelector(selector);
+          if (el) {
+            event.preventDefault();
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    }
+
+    function initLanguageToggle() {
+      const toggleBtn = document.getElementById('languageToggle');
+      const toggleBtnMobile = document.getElementById('languageToggleMobile');
+      const toggle = () => {
+        setLanguage(state.currentLang === 'cs' ? 'en' : 'cs');
+        renderReviews(state.currentLang);
+      };
+      toggleBtn?.addEventListener('click', toggle);
+      toggleBtnMobile?.addEventListener('click', () => {
+        toggle();
+        closeMobileMenu();
+      });
+    }
+
+    function initMenuToggle() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuToggle?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const expanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+        menuToggle.setAttribute('aria-expanded', expanded);
+      });
+    }
+
+    function initReviewControls() {
+      document.getElementById('prevReview').addEventListener('click', () => {
+        state.reviewIndex = (state.reviewIndex - 1 + translations[state.currentLang].reviews.items.length) % translations[state.currentLang].reviews.items.length;
+        renderReviews(state.currentLang);
+      });
+      document.getElementById('nextReview').addEventListener('click', () => {
+        state.reviewIndex = (state.reviewIndex + 1) % translations[state.currentLang].reviews.items.length;
+        renderReviews(state.currentLang);
+      });
+    }
+
+    function initCookieBanner() {
+      const banner = document.getElementById('cookieBanner');
+      const acceptBtn = document.getElementById('cookieAccept');
+      const consent = localStorage.getItem('pk-consent');
+      if (consent) {
+        banner.classList.add('hidden');
+        state.consentGiven = true;
+      }
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('pk-consent', '1');
+        banner.classList.add('hidden');
+        state.consentGiven = true;
+      });
+    }
+
+    function initReveal() {
+      if (revealObserver) {
+        revealObserver.disconnect();
+      }
+      revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+    }
+
+    function initActiveNav() {
+      const sections = document.querySelectorAll('section[data-section], footer[data-section]');
+      const navLinks = () => document.querySelectorAll('#navLinks a, #mobileNavLinks a');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute('id');
+          if (!id) return;
+          const links = navLinks();
+          if (entry.isIntersecting) {
+            links.forEach((link) => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('text-forest-base', 'dark:text-cream');
+              } else {
+                link.classList.remove('text-forest-base', 'dark:text-cream');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    function initStoredLanguage() {
+      const stored = localStorage.getItem('pk-lang');
+      if (stored && translations[stored]) {
+        state.currentLang = stored;
+      }
+      setLanguage(state.currentLang);
+    }
+
+    function initScrollHeader() {
+      const header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 120) {
+          header.classList.add('shadow-lg');
+        } else {
+          header.classList.remove('shadow-lg');
+        }
+      });
+    }
+
+    function initHeroHeight() {
+      const hero = document.getElementById('home');
+      const setHeight = () => {
+        hero.style.minHeight = `${Math.max(window.innerHeight * 0.75, 520)}px`;
+      };
+      setHeight();
+      window.addEventListener('resize', setHeight);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initStoredLanguage();
+      initLanguageToggle();
+      initMenuToggle();
+      initReviewControls();
+      initForm();
+      initScrollButtons();
+      initCookieBanner();
+      initReveal();
+      initActiveNav();
+      initScrollHeader();
+      initHeroHeight();
+    });
+  </script>
+</body>
+</html>
