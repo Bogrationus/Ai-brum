@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eternal Horizons — Шаманский аудио-визуальный опыт</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', sans-serif;
+      color: #f6f3ea;
+      background: #020407 url('background.jpg') center / cover fixed no-repeat;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(4, 8, 12, 0.85), rgba(24, 7, 32, 0.65));
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .veil {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 20% 20%, rgba(255, 191, 120, 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 30%, rgba(109, 201, 255, 0.14) 0%, transparent 45%),
+                  radial-gradient(circle at 50% 80%, rgba(132, 58, 255, 0.18) 0%, transparent 55%);
+      filter: blur(10px) saturate(110%);
+      animation: aurora 30s ease-in-out infinite;
+    }
+
+    @keyframes aurora {
+      0% { transform: scale(1.02) translate3d(0, 0, 0); }
+      50% { transform: scale(1.05) translate3d(1.5%, -1%, 0); }
+      100% { transform: scale(1.02) translate3d(0, 0, 0); }
+    }
+
+    .smoke-layer {
+      position: fixed;
+      inset: -40vmin;
+      pointer-events: none;
+      opacity: 0.55;
+      mix-blend-mode: screen;
+      filter: blur(30px);
+    }
+
+    .smoke-layer::before,
+    .smoke-layer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(120, 211, 255, 0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 30% 40%, rgba(255, 190, 110, 0.18) 0%, transparent 55%),
+                  radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+      transform-origin: center;
+      animation: smoke 48s linear infinite;
+    }
+
+    .smoke-layer::after {
+      animation-duration: 70s;
+      animation-direction: reverse;
+      opacity: 0.6;
+    }
+
+    @keyframes smoke {
+      0% { transform: scale(1.1) rotate(0deg) translate3d(0, 0, 0); }
+      50% { transform: scale(1.3) rotate(180deg) translate3d(-2%, 2%, 0); }
+      100% { transform: scale(1.1) rotate(360deg) translate3d(0, 0, 0); }
+    }
+
+    canvas#visualizer {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0.85;
+    }
+
+    .glyphs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2.6rem);
+      letter-spacing: 1rem;
+      opacity: 0.08;
+      mix-blend-mode: screen;
+      color: #fefae0;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      animation: glyphPulse 18s ease-in-out infinite;
+    }
+
+    @keyframes glyphPulse {
+      0%, 100% { transform: translateY(-1.5%); opacity: 0.05; }
+      50% { transform: translateY(1.5%); opacity: 0.11; }
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 6rem 1.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      background: rgba(8, 6, 12, 0.45);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      pointer-events: none;
+      box-shadow: 0 0 40px rgba(82, 140, 196, 0.18), inset 0 0 40px rgba(231, 197, 140, 0.1);
+      opacity: 0.55;
+    }
+
+    .inner {
+      position: relative;
+      max-width: 960px;
+      padding: clamp(2rem, 6vw, 4rem);
+      border-radius: 22px;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 200, 150, 0.14), transparent 60%),
+                  radial-gradient(circle at 70% 80%, rgba(110, 220, 255, 0.1), transparent 55%),
+                  rgba(10, 9, 16, 0.66);
+      box-shadow: 0 20px 60px rgba(4, 7, 12, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2.8rem, 4vw, 4.2rem);
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.35rem;
+      color: #fef9e4;
+      text-shadow: 0 0 35px rgba(255, 223, 144, 0.6), 0 0 12px rgba(102, 206, 255, 0.8);
+      animation: titleGlow 6s ease-in-out infinite;
+    }
+
+    @keyframes titleGlow {
+      0%, 100% { text-shadow: 0 0 30px rgba(255, 223, 144, 0.6), 0 0 10px rgba(102, 206, 255, 0.55); }
+      50% { text-shadow: 0 0 45px rgba(255, 194, 82, 0.85), 0 0 18px rgba(142, 226, 255, 0.85); }
+    }
+
+    .subtitle {
+      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+      line-height: 1.7;
+      margin: 0 auto 1.8rem;
+      max-width: 720px;
+      color: rgba(245, 240, 223, 0.88);
+    }
+
+    .mantra {
+      margin: 2.4rem auto 3rem;
+      font-family: 'Cinzel Decorative', serif;
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      color: rgba(255, 239, 208, 0.85);
+      position: relative;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+    }
+
+    .mantra::before,
+    .mantra::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      animation: mantraGlow 9s ease-in-out infinite;
+    }
+
+    .mantra::after {
+      inset: 0.4rem;
+      filter: blur(4px);
+      opacity: 0.5;
+      animation-duration: 12s;
+    }
+
+    @keyframes mantraGlow {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 0.9; }
+    }
+
+    .player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .player label {
+      text-transform: uppercase;
+      letter-spacing: 0.35rem;
+      font-size: 0.75rem;
+      color: rgba(255, 244, 226, 0.6);
+    }
+
+    audio {
+      width: min(420px, 90vw);
+      border-radius: 30px;
+      background: rgba(11, 18, 24, 0.78);
+      box-shadow: 0 12px 35px rgba(2, 5, 10, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .ritual {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.8rem;
+      margin-top: 3rem;
+      color: rgba(248, 242, 229, 0.9);
+    }
+
+    .ritual-card {
+      padding: 1.8rem 1.6rem;
+      border-radius: 18px;
+      background: rgba(14, 11, 18, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 0 25px rgba(126, 209, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ritual-card::before {
+      content: '';
+      position: absolute;
+      inset: -40% -40% auto auto;
+      height: 120%;
+      width: 120%;
+      background: radial-gradient(circle at center, rgba(122, 209, 255, 0.28), transparent 70%);
+      mix-blend-mode: screen;
+      transform: translateZ(0);
+      animation: cardPulse 12s ease-in-out infinite;
+    }
+
+    @keyframes cardPulse {
+      0%, 100% { transform: scale(0.95) translate(-10%, -10%); }
+      50% { transform: scale(1.15) translate(5%, 5%); }
+    }
+
+    .ritual-card h3 {
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 0.3rem;
+      font-size: 1rem;
+      margin: 0 0 0.8rem;
+      color: rgba(255, 233, 195, 0.95);
+      text-transform: uppercase;
+    }
+
+    .ritual-card p {
+      margin: 0;
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+
+    .interaction-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 4, 6, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+      padding: 2rem;
+      transition: opacity 0.35s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .interaction-overlay.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .interaction-overlay h2 {
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .interaction-overlay button {
+      padding: 0.9rem 2.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(33, 64, 85, 0.6);
+      color: #fef4dc;
+      border-radius: 999px;
+      font-family: 'Cinzel Decorative', serif;
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .interaction-overlay button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 45px rgba(110, 200, 255, 0.35);
+      background: rgba(72, 122, 144, 0.75);
+    }
+
+    footer {
+      margin-top: 3.2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: rgba(255, 249, 235, 0.55);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 4rem 1.25rem 3rem;
+      }
+
+      .hero::before {
+        inset: 1.5rem;
+      }
+
+      .glyphs {
+        display: none;
+      }
+
+      .ritual {
+        gap: 1.4rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="smoke-layer" aria-hidden="true"></div>
+  <canvas id="visualizer" aria-hidden="true"></canvas>
+  <div class="glyphs" aria-hidden="true">⟐ ✶ ☽ ✦ ⫷ ✧ ☼ ⫸ ✶ ⟐</div>
+
+  <main class="hero">
+    <div class="inner">
+      <h1>Eternal Horizons</h1>
+      <p class="subtitle">
+        Погрузитесь в шаманский ритуал звука и света, вдохновлённый атмосферой
+        ремикса Temple Step Project. Этнические ритмы, мистические голоса и мерцающие огни
+        проводят в медитативное путешествие сквозь вечные горизонты.
+      </p>
+      <span class="mantra">СЛУШАЙ &nbsp; ЧУВСТВУЙ &nbsp; ПРОБУЖДАЙ</span>
+
+      <section class="ritual" aria-label="Этапы погружения">
+        <article class="ritual-card">
+          <h3>Дыхание Земли</h3>
+          <p>Слушайте глубинные басы, синхронизируйте дыхание с вибрацией планеты и позвольте телу раствориться в ритме.</p>
+        </article>
+        <article class="ritual-card">
+          <h3>Танец Огня</h3>
+          <p>Наблюдайте за искрами и потоками света, которые рождаются из частот, ведут сквозь темноту и очищают сознание.</p>
+        </article>
+        <article class="ritual-card">
+          <h3>Голос Неба</h3>
+          <p>Раскройте внутренние горизонты, слушая манящие мелодии, и позвольте им поднять вас над мирской суетой.</p>
+        </article>
+      </section>
+
+      <div class="player">
+        <label for="shamanic-audio">Ritual Player</label>
+        <audio id="shamanic-audio" src="music.mp3" controls loop autoplay playsinline></audio>
+      </div>
+
+      <footer>Создано для погружения в звук и свет ремикса Temple Step Project.</footer>
+    </div>
+  </main>
+
+  <div class="interaction-overlay" role="dialog" aria-modal="true" aria-live="polite">
+    <h2>Включите звук</h2>
+    <p>Нажмите, чтобы активировать шаманский ритуал и визуализацию.</p>
+    <button type="button" id="enter-ritual">Войти</button>
+  </div>
+
+  <script>
+    (function () {
+      const audioElement = document.getElementById('shamanic-audio');
+      const canvas = document.getElementById('visualizer');
+      const overlay = document.querySelector('.interaction-overlay');
+      const enterButton = document.getElementById('enter-ritual');
+      const ctx = canvas.getContext('2d');
+
+      let audioContext;
+      let analyser;
+      let sourceNode;
+      let dataArray;
+      let animationId;
+      let devicePixelRatioCached = window.devicePixelRatio || 1;
+
+      const mysticParticles = Array.from({ length: 42 }, () => ({
+        angle: Math.random() * Math.PI * 2,
+        radiusFactor: Math.random() * 0.45 + 0.15,
+        speed: (Math.random() * 0.0008 + 0.00035) * (Math.random() > 0.5 ? 1 : -1),
+        size: Math.random() * 3 + 1,
+        hue: 180 + Math.random() * 120,
+      }));
+
+      function resizeCanvas() {
+        devicePixelRatioCached = window.devicePixelRatio || 1;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        canvas.width = width * devicePixelRatioCached;
+        canvas.height = height * devicePixelRatioCached;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(devicePixelRatioCached, devicePixelRatioCached);
+      }
+
+      function getAverageFrequency(sliceStart, sliceEnd) {
+        if (!dataArray) return 0;
+        let sum = 0;
+        const start = Math.max(sliceStart, 0);
+        const end = Math.min(sliceEnd, dataArray.length);
+        const length = Math.max(end - start, 1);
+        for (let i = start; i < end; i += 1) {
+          sum += dataArray[i];
+        }
+        return sum / length / 255;
+      }
+
+      function setupAudioGraph() {
+        if (audioContext) {
+          return;
+        }
+
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 2048;
+        sourceNode = audioContext.createMediaElementSource(audioElement);
+        sourceNode.connect(analyser);
+        analyser.connect(audioContext.destination);
+        dataArray = new Uint8Array(analyser.frequencyBinCount);
+      }
+
+      function renderVisualization() {
+        if (!analyser) return;
+        animationId = requestAnimationFrame(renderVisualization);
+
+        analyser.getByteFrequencyData(dataArray);
+
+        const width = canvas.width / devicePixelRatioCached;
+        const height = canvas.height / devicePixelRatioCached;
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const baseRadius = Math.min(width, height) * 0.14;
+        const maxRadius = Math.min(width, height) * 0.48;
+
+        const bassLevel = getAverageFrequency(0, Math.floor(dataArray.length / 8));
+        const midLevel = getAverageFrequency(
+          Math.floor(dataArray.length / 8),
+          Math.floor(dataArray.length / 3)
+        );
+        const trebleLevel = getAverageFrequency(
+          Math.floor(dataArray.length / 3),
+          dataArray.length
+        );
+
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = 'rgba(3, 6, 10, 0.22)';
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.save();
+        ctx.translate(centerX, centerY);
+
+        const length = dataArray.length;
+        const step = Math.max(2, Math.floor(length / 180));
+        const angleStep = (Math.PI * 2) / (length / step);
+        let angleIndex = 0;
+
+        for (let i = 0; i < length; i += step) {
+          const value = dataArray[i] / 255;
+          const dynamicRadius = baseRadius + value * (maxRadius - baseRadius);
+          const angle = angleIndex * angleStep + performance.now() * 0.0001;
+          const innerRadius = dynamicRadius * (0.4 + trebleLevel * 0.3);
+
+          const xInner = Math.cos(angle) * innerRadius;
+          const yInner = Math.sin(angle) * innerRadius;
+          const xOuter = Math.cos(angle) * dynamicRadius;
+          const yOuter = Math.sin(angle) * dynamicRadius;
+
+          ctx.strokeStyle = `hsla(${200 + value * 120}, 85%, ${45 + value * 35}%, ${0.45 + value * 0.45})`;
+          ctx.lineWidth = 1 + value * 4;
+          ctx.beginPath();
+          ctx.moveTo(xInner, yInner);
+          ctx.lineTo(xOuter, yOuter);
+          ctx.stroke();
+
+          ctx.beginPath();
+          const orbGradient = ctx.createRadialGradient(xOuter, yOuter, 0, xOuter, yOuter, 12 + value * 24);
+          orbGradient.addColorStop(0, `hsla(${180 + value * 90}, 90%, 80%, 0.9)`);
+          orbGradient.addColorStop(0.4, `hsla(${210 + bassLevel * 60}, 95%, 65%, 0.6)`);
+          orbGradient.addColorStop(1, 'rgba(12, 20, 30, 0)');
+          ctx.fillStyle = orbGradient;
+          ctx.globalCompositeOperation = 'lighter';
+          ctx.arc(xOuter, yOuter, 6 + value * 16, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.globalCompositeOperation = 'source-over';
+          angleIndex += 1;
+        }
+
+        ctx.restore();
+
+        ctx.globalCompositeOperation = 'lighter';
+        mysticParticles.forEach((particle) => {
+          particle.angle += particle.speed * (1 + bassLevel * 2.6);
+          const dynamicRadius = baseRadius + particle.radiusFactor * (maxRadius - baseRadius) * (0.85 + midLevel * 0.45);
+          const x = centerX + Math.cos(particle.angle) * dynamicRadius;
+          const y = centerY + Math.sin(particle.angle) * dynamicRadius;
+          const glow = particle.size + trebleLevel * 6 + bassLevel * 4;
+
+          ctx.beginPath();
+          ctx.fillStyle = `hsla(${particle.hue + bassLevel * 40}, 85%, ${68 + trebleLevel * 18}%, ${0.25 + midLevel * 0.4})`;
+          ctx.shadowBlur = 20 + bassLevel * 45;
+          ctx.shadowColor = `hsla(${particle.hue + bassLevel * 40}, 90%, 70%, 0.8)`;
+          ctx.arc(x, y, glow, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.shadowBlur = 0;
+        ctx.globalCompositeOperation = 'source-over';
+      }
+
+      function startExperience() {
+        try {
+          setupAudioGraph();
+          if (audioContext && audioContext.state === 'suspended') {
+            audioContext.resume();
+          }
+          const playPromise = audioElement.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              overlay.classList.remove('visible');
+              if (!animationId) {
+                renderVisualization();
+              }
+            }).catch(() => {
+              overlay.classList.add('visible');
+            });
+          } else {
+            overlay.classList.remove('visible');
+            if (!animationId) {
+              renderVisualization();
+            }
+          }
+        } catch (error) {
+          console.error('Ошибка инициализации аудио:', error);
+          overlay.classList.add('visible');
+        }
+      }
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      audioElement.addEventListener('play', () => {
+        setupAudioGraph();
+        if (audioContext && audioContext.state === 'suspended') {
+          audioContext.resume();
+        }
+        overlay.classList.remove('visible');
+        if (!animationId) {
+          renderVisualization();
+        }
+      });
+
+      audioElement.addEventListener('pause', () => {
+        if (audioContext && audioContext.state === 'running') {
+          audioContext.suspend();
+        }
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
+      });
+
+      enterButton.addEventListener('click', startExperience);
+
+      document.addEventListener('keydown', (event) => {
+        if (event.code === 'Space' && overlay.classList.contains('visible')) {
+          event.preventDefault();
+          startExperience();
+        }
+      });
+
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          startExperience();
+        }, 250);
+      });
+    })();
+  </script>
+</body>
+</html>
